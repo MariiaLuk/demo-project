@@ -43,7 +43,6 @@
         </dependency>
 
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -51,15 +50,15 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                  <!--  <parallel>methods</parallel>
-                    <threadCount>4</threadCount>-->
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>false</useUnlimitedThreads>
+                    <threadCount>4</threadCount>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
-                        <include>**/*Runner.java</include>
+                        <include>**/CukesRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
